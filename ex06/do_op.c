@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/03 21:10:18 by nhuber            #+#    #+#             */
-/*   Updated: 2015/11/05 08:39:01 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/07 09:16:25 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,12 @@ int		main(int ac, char **av)
 	int			nbr1;
 	int			nbr2;
 	int			op;
-	long int	result;
+	long int		result;
 	int			(*func_operate[5])(int, int);
 
-	if (ft_error(av) == 0 || ac != 4)
+	if (ac != 4)
+		return (0);
+	if (ft_error(av) == 0)
 		return (0);
 	func_operate[0] = &ft_add;
 	func_operate[1] = &ft_minus;

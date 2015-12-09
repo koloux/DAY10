@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/03 14:32:04 by nhuber            #+#    #+#             */
-/*   Updated: 2015/11/05 21:17:40 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/09 15:30:50 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 	i = 0;
 	while (i < length)
 	{
-		f(i);
+		f(tab[i]);
 		i++;
 	}
 }
