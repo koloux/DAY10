@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/03 21:10:18 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/07 09:16:25 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/11 14:41:35 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ int		main(int ac, char **av)
 
 	if (ac != 4)
 		return (0);
-	if (ft_error(av) == 0)
-		return (0);
+	ft_error(av) == 0 ? return (0) : ;
 	func_operate[0] = &ft_add;
 	func_operate[1] = &ft_minus;
 	func_operate[2] = &ft_mul;
@@ -54,5 +53,5 @@ int		main(int ac, char **av)
 	nbr2 = ft_atoi(av[3]);
 	result = func_operate[op](nbr1, nbr2);
 	ft_putnbr(result);
-	return (0);
+	ft_putchar('\n');
 }

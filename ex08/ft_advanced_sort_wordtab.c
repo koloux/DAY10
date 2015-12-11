@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_choice.c                                        :+:      :+:    :+:   */
+/*   ft_advanced_sort_wordtab.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/04 12:54:43 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/11 13:43:10 by nhuber           ###   ########.fr       */
+/*   Created: 2015/12/11 13:03:31 by nhuber            #+#    #+#             */
+/*   Updated: 2015/12/11 16:50:16 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "myheader.h"
-
-int		ft_choice(char **av)
+void	ft_advanced_sort_wordtab(char **tab, int (*cmp)(char *, char *))
 {
-	if (av[2][0] == '+')
-		return (0);
-	if (av[2][0] == '-')
-		return (1);
-	if (av[2][0] == '*')
-		return (2);
-	if (av[2][0] == '/')
-		return (3);
-	if (av[2][0] == '%')
-		return (4);
-	return (5);
+	int	i;
+	char	*tmp;
+
+	i = 0;
+	while (tab && (tab[i + 1] != '\0'))
+	{
+		if (cmp(tab[i], tab[i + 1]) > 0)
+		{
+			tmp = tab[i];
+			tab[i] = tab[i + 1];
+			tab[i + 1] = tmp;
+			i = 0;
+		}
+		i++;
+	}
 }
