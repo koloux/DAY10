@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 13:03:31 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/11 16:40:31 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/12 20:36:09 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@ int	ft_strcmp(char *s1, char *s2)
 	int i;
 
 	i = 0;
-	while (s1[i] || s2[i])
+	while (s1[i] != '\0' && s2 != '\0')
 	{
-		if (s1[i] > s2[i])
-			return ((s1[i] - '0') - (s2[i] - '0'));
-		if (s1[i] < s2[i])
+		if (s1[i] != s2[i])
 			return ((s1[i] - '0') - (s2[i] - '0'));
 		i++;
 	}
@@ -39,7 +37,7 @@ void	ft_sort_wordtab(char **tab)
 			tmp = tab[i];
 			tab[i] = tab[i + 1];
 			tab[i + 1] = tmp;
-			i = 0;
+			i = -1;
 		}
 		i++;
 	}

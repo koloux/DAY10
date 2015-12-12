@@ -6,14 +6,16 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/03 21:10:18 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/11 14:41:35 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/12 18:45:36 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "myheader.h"
 
-int		ft_error(char **av)
+int		ft_error(int ac, char **av)
 {
+	if (ac != 4)
+		return (0);
 	if (av[3][0] == '0' && av[2][0] == '/')
 	{
 		ft_putstr("Stop : division by zero\n");
@@ -35,9 +37,8 @@ int		main(int ac, char **av)
 	long int		result;
 	int			(*func_operate[5])(int, int);
 
-	if (ac != 4)
+	if (ft_error(ac, av) == 0)
 		return (0);
-	ft_error(av) == 0 ? return (0) : ;
 	func_operate[0] = &ft_add;
 	func_operate[1] = &ft_minus;
 	func_operate[2] = &ft_mul;
@@ -46,7 +47,7 @@ int		main(int ac, char **av)
 	op = ft_choice(av);
 	if (op == 5)
 	{
-		ft_putchar('0');
+		ft_putstr("0\n");
 		return (0);
 	}
 	nbr1 = ft_atoi(av[1]);
