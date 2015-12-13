@@ -6,13 +6,13 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 13:03:31 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/12 20:36:09 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/13 11:00:48 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (s1[i] != '\0' && s2 != '\0')
@@ -26,7 +26,7 @@ int	ft_strcmp(char *s1, char *s2)
 
 void	ft_sort_wordtab(char **tab)
 {
-	int	i;
+	int		i;
 	char	*tmp;
 
 	i = 0;

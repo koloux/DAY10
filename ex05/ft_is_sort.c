@@ -6,11 +6,11 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/03 20:19:42 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/12 18:42:51 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/13 10:56:58 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_sort(int *tab, int length, int (*f)(int, int))
+int		ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
 	int i;
 
@@ -25,5 +25,5 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 			return (0);
 		i++;
 	}
-		return (1);
+	return (1);
 }

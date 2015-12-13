@@ -6,13 +6,13 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 13:03:31 by nhuber            #+#    #+#             */
-/*   Updated: 2015/12/12 20:40:20 by nhuber           ###   ########.fr       */
+/*   Updated: 2015/12/13 11:00:20 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_advanced_sort_wordtab(char **tab, int (*cmp)(char *, char *))
 {
-	int	i;
+	int		i;
 	char	*tmp;
 
 	i = 0;
